@@ -10,5 +10,12 @@ package datamodell;
  * @author maik
  */
 public interface Reifen {
-    
+
+    int getID();
+
+    String getType();
+
+    short getFarbe();
+
+    double getPreis();
 }

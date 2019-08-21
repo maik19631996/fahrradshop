@@ -9,15 +9,15 @@ package datamodell;
  *
  * @author maik
  */
-public interface Rahmen {
+public interface Antrieb {
 
-    public int getID();
+    int getID();
 
-    public String getType();
+    String getName();
 
-    public short getFarbe();
+    String getBeschreibug();
 
-    public double getPreis();
+    String getHersteller();
 
-    public String getBeschreibung();
+    double getPreis();
 }

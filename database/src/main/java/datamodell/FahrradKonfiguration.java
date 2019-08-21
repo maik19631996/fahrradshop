@@ -9,15 +9,13 @@ package datamodell;
  *
  * @author maik
  */
-public interface Rahmen {
-
+public interface FahrradKonfiguration {
     public int getID();
-
-    public String getType();
-
-    public short getFarbe();
-
-    public double getPreis();
-
-    public String getBeschreibung();
+    public Rahmen getRahmen();
+    public Reifen getReifen();
+    public Antrieb getAntrieb();
+    public int getKoerpergroesse();
+    public int getSchrittlaenge();
+    
+    
 }
