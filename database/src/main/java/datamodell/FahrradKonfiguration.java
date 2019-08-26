@@ -14,7 +14,7 @@ public interface FahrradKonfiguration {
     public Rahmen getRahmen();
     public Reifen getReifen();
     public Antrieb getAntrieb();
-    public int getKoerpergroesse();
+    public int getKoepergroesse();
     public int getSchrittlaenge();
     
     

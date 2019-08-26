@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package injector;
 
-module DeOstfaliaDatabaseTest {
-    requires java.sql;
-    
-    exports datamodell;
-    exports injector;
-    
+/**
+ *
+ * @author maik
+ */
+public interface Injector {
+    BikeShopInterface getShop();
 }
