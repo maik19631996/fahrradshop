@@ -1,1 +1,9 @@
+businesslogic\FahrradKonfiguration.class
+businesslogic\BusinessLogicFacImpl.class
 module-info.class
+businesslogic\Reifen.class
+businesslogic\BusinessLogic.class
+businesslogic\BusinessLogicImpl.class
+businesslogic\Rahmen.class
+businesslogic\Antrieb.class
+businesslogic\BusinessLogicFac.class
