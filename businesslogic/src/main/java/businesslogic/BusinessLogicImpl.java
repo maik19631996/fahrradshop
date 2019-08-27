@@ -16,41 +16,17 @@ import java.util.Map;
  */
 public class BusinessLogicImpl implements BusinessLogic {
     private FahrradKonfiguration f;
-    private Antrieb a;
-    private Rahmen ra;
-    private Reifen re;
     
     @Override
-    public Map getPrices(FahrradKonfiguration f, Antrieb a, Rahmen ra, Reifen re) {
+    public Map getPrices(FahrradKonfiguration f) {
         this.f = f;
-        this.a = a;
-        this.ra = ra;
-        this.re = re;
         
         Map<String,Double> m = new HashMap<String,Double>();
         
-        m.put("Antrieb", a.getPreis());
-        m.put("Rahmen", ra.getPreis());
-        m.put("Reifen", re.getPreis());
-        m.put("sum", a.getPreis() + ra.getPreis() + re.getPreis());
+        m.put("Antrieb", f.getAntrieb().getPreis());
+        m.put("Rahmen", f.getRahmen().getPreis());
+        m.put("Reifen", f.getReifen().getPreis());
+        m.put("sum", f.getAntrieb().getPreis() + f.getRahmen().getPreis() + f.getReifen().getPreis());
         return m;
-    }
-    
-    // todo
-    @Override
-    public List<Antrieb> getListAntrieb() {
-        return new ArrayList<Antrieb>();
-    }
-    
-    // todo
-    @Override
-    public List<Rahmen> getListRahmen() {
-        return new ArrayList<Rahmen>();
-    }
-    
-    // todo
-    @Override
-    public List<Reifen> getListReifen() {
-        return new ArrayList<Reifen>();
     }
 }

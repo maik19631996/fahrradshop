@@ -4,5 +4,7 @@
  * and open the template in the editor.
  */
 
-module DeOstfaliaBusinesslogicTest {
+module de.ostfalia.businesslogic {
+    // requires de.ostfalia.database.datamodell;
+    exports businesslogic;
 }
