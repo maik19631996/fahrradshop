@@ -14,7 +14,7 @@
   <children>
     <Label text="Fahrradshop" textAlignment="LEFT" wrapText="false" />
     <Label text="Rahmentyp" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox fx:id="choiceBoxRahmen" onMouseClicked="#getRahmen">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -24,7 +24,7 @@
       </items>
     </ChoiceBox>
     <Label text="Rahmenfarbe" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox id="getFarben">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -34,7 +34,7 @@
       </items>
     </ChoiceBox>
     <Label text="Reifen" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox id="getReifen" fx:id="choiceBoxReifen">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -44,7 +44,7 @@
       </items>
     </ChoiceBox>
     <Label text="Antrieb" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox id="getAntriebe" fx:id="choiceBoxAntriebe">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />

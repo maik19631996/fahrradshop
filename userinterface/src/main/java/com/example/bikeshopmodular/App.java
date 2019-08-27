@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * JavaFX App
@@ -14,9 +15,20 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Injector databaseInjector;
+    protected static BikeShopInterface bikeShop;
+    protected static List<Rahmen> listRahmen;
+    protected static List<Antrieb> listAntrieb;
+    protected static List<Reifen> listReifen;    
+    protected static FahrradKonfiguration f;
 
     @Override
     public void start(Stage stage) throws IOException {
+        bikeShop = databaseInjector.getShop();
+        listRahmen = bikeShop.getAllRahmen();
+        listAntrieb = bikeShop.getAllAntriebe();
+        listReifen = bikeShop.getAllReifen();
+              
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
         stage.show();

@@ -14,17 +14,7 @@
   <children>
     <Label text="Fahrradshop" textAlignment="LEFT" wrapText="false" />
     <Label text="Rahmentyp" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <Label text="Rahmenfarbe" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox fx:id="choiceBoxRahmen" onMouseClicked="#getRahmen">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -34,7 +24,7 @@
       </items>
     </ChoiceBox>
     <Label text="Reifen" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox id="getReifen" fx:id="choiceBoxReifen" onMouseClicked="#getReifen">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -44,7 +34,7 @@
       </items>
     </ChoiceBox>
     <Label text="Antrieb" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox>
+    <ChoiceBox id="getAntriebe" fx:id="choiceBoxAntriebe" onMouseClicked="#getAntriebe">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -54,9 +44,9 @@
       </items>
     </ChoiceBox>
     <Label text="Deine Schrittlänge" textAlignment="LEFT" wrapText="false" />
-    <Slider prefWidth="182.0" />
+    <TextField prefWidth="200.0" />
     <Label text="Deine Körpergröße" textAlignment="LEFT" wrapText="false" />
-    <Slider prefWidth="182.0" />
+    <TextField prefWidth="200.0" />
     <Button id="primaryButton" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" text="Weiter" VBox.vgrow="ALWAYS">
       <VBox.margin>
         <Insets left="450.0" />

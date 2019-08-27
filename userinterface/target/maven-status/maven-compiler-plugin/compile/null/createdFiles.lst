@@ -1,4 +1,10 @@
-com\example\bikeshopmodular\SecondaryController.class
+com\example\bikeshopmodular\Antrieb.class
+com\example\bikeshopmodular\FahrradKonfiguration.class
 com\example\bikeshopmodular\PrimaryController.class
+com\example\bikeshopmodular\BikeShopInterface.class
 module-info.class
 com\example\bikeshopmodular\App.class
+com\example\bikeshopmodular\Rahmen.class
+com\example\bikeshopmodular\SecondaryController.class
+com\example\bikeshopmodular\Injector.class
+com\example\bikeshopmodular\Reifen.class
