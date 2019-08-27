@@ -23,6 +23,16 @@
         </FXCollections>
       </items>
     </ChoiceBox>
+    <Label text="Rahmenfarbe" textAlignment="LEFT" wrapText="false" />
+    <ChoiceBox id="choiceBoxRahmen" fx:id="choiceBoxRahmenFarbe" onMouseClicked="#getRahmenFarbe">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
     <Label text="Reifen" textAlignment="LEFT" wrapText="false" />
     <ChoiceBox id="getReifen" fx:id="choiceBoxReifen" onMouseClicked="#getReifen">
       <items>
@@ -44,10 +54,10 @@
       </items>
     </ChoiceBox>
     <Label text="Deine Schrittlänge" textAlignment="LEFT" wrapText="false" />
-    <TextField prefWidth="200.0" />
+    <TextField fx:id="getSchritt" prefWidth="200.0" />
     <Label text="Deine Körpergröße" textAlignment="LEFT" wrapText="false" />
-    <TextField prefWidth="200.0" />
-    <Button id="primaryButton" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" text="Weiter" VBox.vgrow="ALWAYS">
+    <TextField fx:id="getGroesse" prefWidth="200.0" />
+    <Button id="primaryButton" fx:id="weiter" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" text="Weiter" VBox.vgrow="ALWAYS">
       <VBox.margin>
         <Insets left="450.0" />
       </VBox.margin>
