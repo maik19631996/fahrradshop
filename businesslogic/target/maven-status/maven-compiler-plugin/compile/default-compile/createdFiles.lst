@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 de/ostfalia/businesslogic/businesslogic/Antrieb.class
 de/ostfalia/businesslogic/businesslogic/Reifen.class
 de/ostfalia/businesslogic/businesslogic/Rahmen.class
@@ -7,3 +8,23 @@ de/ostfalia/businesslogic/businesslogic/BusinessLogicFacImpl.class
 de/ostfalia/businesslogic/businesslogic/BusinessLogic.class
 de/ostfalia/businesslogic/businesslogic/BusinessLogicFac.class
 de/ostfalia/businesslogic/businesslogic/BusinessLogicImpl.class
+=======
+de\ostfalia\businesslogic\database\Rahmenfarbe.class
+de\ostfalia\businesslogic\database\Antrieb.class
+de\ostfalia\businesslogic\businesslogicOLD\BusinessLogic.class
+de\ostfalia\businesslogic\database\Reifen.class
+de\ostfalia\businesslogic\businesslogic\BusinessLogicImpl.class
+de\ostfalia\businesslogic\businesslogic\BusinessLogic.class
+de\ostfalia\businesslogic\businesslogic\InvalidConfigException.class
+de\ostfalia\businesslogic\businesslogicOLD\FahrradKonfiguration.class
+de\ostfalia\businesslogic\businesslogicOLD\BusinessLogicImpl.class
+module-info.class
+de\ostfalia\businesslogic\businesslogicOLD\Antrieb.class
+de\ostfalia\businesslogic\businesslogicOLD\BusinessLogicFacImpl.class
+de\ostfalia\businesslogic\database\Database.class
+de\ostfalia\businesslogic\database\Fahrradkonfiguration.class
+de\ostfalia\businesslogic\businesslogicOLD\Rahmen.class
+de\ostfalia\businesslogic\businesslogicOLD\BusinessLogicFac.class
+de\ostfalia\businesslogic\businesslogicOLD\Reifen.class
+de\ostfalia\businesslogic\database\Rahmen.class
+>>>>>>> 1962a32dbec2a9875e573103661233c94fd5ab8a

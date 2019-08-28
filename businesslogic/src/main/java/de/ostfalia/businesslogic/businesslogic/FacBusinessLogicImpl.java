@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 package de.ostfalia.businesslogic.businesslogic;
+import de.ostfalia.businesslogic.database.Database;
 
 /**
  *
- * @author Rubyn Angelo Stark
+ * @author z
  */
-public class BusinessLogicFacImpl implements BusinessLogicFac {
+public class FacBusinessLogicImpl implements FacBusinessLogic {
     @Override
-    public BusinessLogicImpl Create() {
-        return new BusinessLogicImpl(); 
+    public BusinessLogic create(Database db) {
+        return new BusinessLogicImpl(db);
     }
 }

@@ -4,13 +4,20 @@
  * and open the template in the editor.
  */
 package de.ostfalia.businesslogic.businesslogic;
-
-import java.util.Map;
+import de.ostfalia.businesslogic.database.Database;
+import java.util.List;
 
 /**
  *
- * @author Rubyn Angelo Stark
+ * @author z
  */
-public interface BusinessLogic {
-    Map getPrices(FahrradKonfiguration f);
+public interface BusinessLogic {    
+    public List<String> getAllRahmenTypen();
+    public List<String> getAllRahmenfarben();
+    public List<String> getAllReifen();
+    public List<String> getAllAntriebe();
+    
+    public void setFahrradKonfiguration(String rahmen, String rahmenfarbe, String reifen, String antrieb, String schrittlaenge, String koerpergroesse) throws Exception;    
+   
+    public double getPrice() throws Exception;
 }

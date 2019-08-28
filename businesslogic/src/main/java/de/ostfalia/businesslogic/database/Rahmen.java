@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package de.ostfalia.businesslogic.businesslogic;
+package de.ostfalia.businesslogic.database;
 
 /**
  *
- * @author Rubyn Angelo Stark
+ * @author z
  */
-public interface BusinessLogicFac {
-    public BusinessLogic Create();
+public interface Rahmen {
+    public String toString();
+    public double getPrice();
 }
