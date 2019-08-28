@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
+//import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
+//import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
 import java.util.List;
 import java.util.Map;
 
@@ -36,6 +38,9 @@ public class App extends Application {
  
     @Override
     public void start(Stage stage) throws IOException {
+        //FacBusinessLogic facBusinessLogic = new FacBusinessLogicImpl();
+        //businesslogic = facBusinessLogic.create(maikstuff);
+        
         antriebe = businesslogic.getAllAntriebe();
         rahmentypen = businesslogic.getAllRahmenTypen();
         rahmenfarben = businesslogic.getAllRahmenfarben();
