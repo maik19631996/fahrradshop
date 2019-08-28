@@ -6,6 +6,7 @@
 package de.ostfalia.businesslogic.businesslogic;
 import de.ostfalia.businesslogic.database.Database;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -19,5 +20,5 @@ public interface BusinessLogic {
     
     public void setFahrradKonfiguration(String rahmen, String rahmenfarbe, String reifen, String antrieb, String schrittlaenge, String koerpergroesse) throws Exception;    
    
-    public double getPrice() throws Exception;
+    public Map getPrices() throws Exception;
 }

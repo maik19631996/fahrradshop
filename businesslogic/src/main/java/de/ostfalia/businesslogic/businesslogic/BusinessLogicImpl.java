@@ -11,7 +11,10 @@ import de.ostfalia.businesslogic.database.Rahmenfarbe;
 import de.ostfalia.businesslogic.database.Reifen;
 import de.ostfalia.businesslogic.database.Antrieb;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -126,7 +129,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     }
     
     @Override
-    public double getPrice() {
+    public Map getPrices() {
         if (rahmen == null || rahmenfarbe == null || reifen == null || antrieb == null)
             throw new InvalidConfigException("Konfiguration ist nicht gesetzt worden");
         
@@ -147,8 +150,14 @@ public class BusinessLogicImpl implements BusinessLogic {
             antrieb = null;
             
             throw new InvalidConfigException(m);
-        }  
+        }
+        
+        Map m = new Hashtable();
+        m.put("rahmen", rahmen.getPrice());
+        m.put("reifen", reifen.getPrice());
+        m.put("antrieb", antrieb.getPrice());
+        m.put("sum", rahmen.getPrice() + reifen.getPrice() + antrieb.getPrice());
             
-        return rahmen.getPrice() + reifen.getPrice() + antrieb.getPrice();
+        return m;
     }
 }
