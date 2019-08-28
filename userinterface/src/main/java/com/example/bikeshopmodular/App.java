@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
 import java.util.List;
+import java.util.Map;
 
 /**
  * JavaFX App
@@ -15,20 +17,30 @@ import java.util.List;
 public class App extends Application {
 
     private static Scene scene;
-    private static Injector databaseInjector;
-    protected static BikeShopInterface bikeShop;
-    protected static List<Rahmen> listRahmen;
-    protected static List<Antrieb> listAntrieb;
-    protected static List<Reifen> listReifen;    
-    protected static FahrradKonfiguration f;
-
+    protected static String rahmentyp;
+    protected static String rahmenfarbe;
+    protected static String reifen;
+    protected static String antrieb;
+    protected static int schrittlaenge;
+    protected static int koerpergroesse;
+    
+    protected static BusinessLogic businesslogic;
+    protected static List<String> antriebe;
+    protected static List<String> rahmentypen;
+    protected static List<String> rahmenfarben;
+    protected static List<String> allReifen;
+    
+    protected static Map m;
+    
+    //protected static gesamtPreis
+ 
     @Override
     public void start(Stage stage) throws IOException {
-        bikeShop = databaseInjector.getShop();
-        listRahmen = bikeShop.getAllRahmen();
-        listAntrieb = bikeShop.getAllAntriebe();
-        listReifen = bikeShop.getAllReifen();
-              
+        antriebe = businesslogic.getAllAntriebe();
+        rahmentypen = businesslogic.getAllRahmenTypen();
+        rahmenfarben = businesslogic.getAllRahmenfarben();
+        allReifen = businesslogic.getAllReifen();        
+        
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
         stage.show();

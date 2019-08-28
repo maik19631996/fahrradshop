@@ -9,12 +9,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_LEFT" depthTest="DISABLE" disable="false" fillWidth="true" focusTraversable="false" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.example.bikeshopmodular.PrimaryController">
+<VBox alignment="TOP_LEFT" depthTest="DISABLE" disable="false" fillWidth="true" focusTraversable="false" prefHeight="500.0" prefWidth="600.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.example.bikeshopmodular.PrimaryController">
   <children>
-    <Label text="Fahrradshop" textAlignment="LEFT" wrapText="false" />
+    <Label text="Fahrradshop" textAlignment="LEFT" wrapText="false">
+      <font>
+        <Font name="System Bold Italic" size="24.0" />
+      </font>
+    </Label>
     <Label text="Rahmentyp" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox fx:id="choiceBoxRahmen" onMouseClicked="#getRahmen">
+    <ChoiceBox id="Rahmen" fx:id="choiceBoxRahmen" value="Item 1">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -24,40 +29,28 @@
       </items>
     </ChoiceBox>
     <Label text="Rahmenfarbe" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox id="choiceBoxRahmen" fx:id="choiceBoxRahmenFarbe" onMouseClicked="#getRahmenFarbe">
+    <ChoiceBox id="choiceBoxRahmen" fx:id="choiceBoxRahmenFarbe" prefWidth="67.0">
       <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
+        <FXCollections fx:factory="observableArrayList" />
       </items>
     </ChoiceBox>
     <Label text="Reifen" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox id="getReifen" fx:id="choiceBoxReifen" onMouseClicked="#getReifen">
+    <ChoiceBox id="getReifen" fx:id="choiceBoxReifen" prefWidth="67.0">
       <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
+        <FXCollections fx:factory="observableArrayList" />
       </items>
     </ChoiceBox>
     <Label text="Antrieb" textAlignment="LEFT" wrapText="false" />
-    <ChoiceBox id="getAntriebe" fx:id="choiceBoxAntriebe" onMouseClicked="#getAntriebe">
+    <ChoiceBox id="getAntriebe" fx:id="choiceBoxAntriebe" maxHeight="-1.0" minWidth="-1.0" prefWidth="67.0">
       <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
+        <FXCollections fx:factory="observableArrayList" />
       </items>
     </ChoiceBox>
     <Label text="Deine Schrittlänge" textAlignment="LEFT" wrapText="false" />
-    <TextField fx:id="getSchritt" prefWidth="200.0" />
+    <TextField fx:id="textFieldSchritt" maxWidth="75.0" prefHeight="-1.0" prefWidth="50.0" />
     <Label text="Deine Körpergröße" textAlignment="LEFT" wrapText="false" />
-    <TextField fx:id="getGroesse" prefWidth="200.0" />
-    <Button id="primaryButton" fx:id="weiter" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" text="Weiter" VBox.vgrow="ALWAYS">
+    <TextField id="getGroesse" fx:id="textFieldGroesse" maxWidth="75.0" minWidth="-1.0" prefWidth="75.0" />
+    <Button id="primaryButton" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" text="switch" VBox.vgrow="ALWAYS">
       <VBox.margin>
         <Insets left="450.0" />
       </VBox.margin>
