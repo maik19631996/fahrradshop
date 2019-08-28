@@ -12,7 +12,6 @@ import de.ostfalia.businesslogic.database.Reifen;
 import de.ostfalia.businesslogic.database.Antrieb;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +26,8 @@ public class BusinessLogicImpl implements BusinessLogic {
     private Rahmenfarbe rahmenfarbe;
     private Reifen reifen;
     private Antrieb antrieb;
+    private int schrittlaenge = -1;
+    private int koerpergroesse = -1;
     private List<Rahmen> rahmenList = null;
     private List<Rahmenfarbe> rahmenfarbenList = null;
     private List<Reifen> reifenList = null;
@@ -34,6 +35,10 @@ public class BusinessLogicImpl implements BusinessLogic {
     
     public BusinessLogicImpl(Database db) {
         this.db = db;
+        rahmenList = db.getAllRahmenTypen();
+        rahmenfarbenList = db.getAllRahmenfarben();
+        reifenList = db.getAllReifen();
+        antriebeList = db.getAllAntriebe();
     }
     
     @Override
@@ -83,7 +88,14 @@ public class BusinessLogicImpl implements BusinessLogic {
     }
     
     @Override
-    public void setFahrradKonfiguration(String rahmen, String rahmenfarbe, String reifen, String antrieb, String schrittlaenge, String koerpergroesse) {
+    public void setFahrradKonfiguration(String rahmen, String rahmenfarbe, String reifen, String antrieb, int schrittlaenge, int koerpergroesse) {
+        this.rahmen = null;
+        this.rahmenfarbe = null;
+        this.reifen = null;
+        this.antrieb = null;
+        this.schrittlaenge = -1;
+        this.koerpergroesse = -1; 
+        
         for (Rahmen r : rahmenList) {
             if (r.toString() == rahmen) {
                 this.rahmen = r;
@@ -108,21 +120,35 @@ public class BusinessLogicImpl implements BusinessLogic {
             }
         }
         
-        if (rahmen == null || rahmenfarbe == null || reifen == null || antrieb == null) {
+        if (schrittlaenge >= 0) {
+            this.schrittlaenge = schrittlaenge;            
+        }
+        
+        if (koerpergroesse >= 0) {
+            this.koerpergroesse = koerpergroesse;
+        }
+                
+        if (this.rahmen == null || this.rahmenfarbe == null || this.reifen == null || this.antrieb == null || schrittlaenge == -1 || koerpergroesse == -1) {
             String m = "";
-            if (rahmen == null)
+            if (this.rahmen == null)
                 m = "Rahmen nicht in Rahmenliste gefunden";
-            if (rahmenfarbe == null)
+            else if (this.rahmenfarbe == null)
                 m = "Rahmenfarbe nicht in Rahmenfarbenliste gefunden";
-            if (reifen == null)
+            else if (this.reifen == null)
                 m = "Reifen nicht in Reifenliste gefunden";
-            if (antrieb == null)
+            else if (this.antrieb == null)
                 m = "Antrieb nicht in Antriebsliste gefunden";
+            else if (schrittlaenge == -1)
+                m = "Schrittlänge muss größer als 0 sein!";
+            else if (koerpergroesse == -1)
+                 m = "Körpergröße muss größer als 0 sein!";        
             
-            rahmen = null;
-            rahmenfarbe = null;
-            reifen = null;
-            antrieb = null;
+            this.rahmen = null;
+            this.rahmenfarbe = null;
+            this.reifen = null;
+            this.antrieb = null;
+            this.schrittlaenge = -1;
+            this.koerpergroesse = -1; 
             
             throw new InvalidConfigException(m);
         }           
@@ -130,29 +156,10 @@ public class BusinessLogicImpl implements BusinessLogic {
     
     @Override
     public Map getPrices() {
-        if (rahmen == null || rahmenfarbe == null || reifen == null || antrieb == null)
+        if (rahmen == null && reifen == null && antrieb == null)
             throw new InvalidConfigException("Konfiguration ist nicht gesetzt worden");
         
-        else if (rahmen == null || rahmenfarbe == null || reifen == null || antrieb == null) {
-            String m = "";
-            if (rahmen == null)
-                m = "Rahmen nicht in Rahmenliste gefunden";
-            if (rahmenfarbe == null)
-                m = "Rahmenfarbe nicht in Rahmenfarbenliste gefunden";
-            if (reifen == null)
-                m = "Reifen nicht in Reifenliste gefunden";
-            if (antrieb == null)
-                m = "Antrieb nicht in Antriebsliste gefunden";
-            
-            rahmen = null;
-            rahmenfarbe = null;
-            reifen = null;
-            antrieb = null;
-            
-            throw new InvalidConfigException(m);
-        }
-        
-        Map m = new Hashtable();
+        Map m = new HashMap();
         m.put("rahmen", rahmen.getPrice());
         m.put("reifen", reifen.getPrice());
         m.put("antrieb", antrieb.getPrice());

@@ -18,7 +18,7 @@ public interface BusinessLogic {
     public List<String> getAllReifen();
     public List<String> getAllAntriebe();
     
-    public void setFahrradKonfiguration(String rahmen, String rahmenfarbe, String reifen, String antrieb, String schrittlaenge, String koerpergroesse) throws Exception;    
+    public void setFahrradKonfiguration(String rahmen, String rahmenfarbe, String reifen, String antrieb, int schrittlaenge, int koerpergroesse) throws RuntimeException;    
    
-    public Map getPrices() throws Exception;
+    public Map getPrices() throws RuntimeException;
 }
