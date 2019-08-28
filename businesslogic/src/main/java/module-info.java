@@ -5,6 +5,6 @@
  */
 
 module de.ostfalia.businesslogic {
-    // requires de.ostfalia.database.datamodell;
-    exports businesslogic;
+    requires DeOstfaliaDatabase;
+    exports de.ostfalia.businesslogic.businesslogic;
 }
