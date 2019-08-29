@@ -43,7 +43,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     
     @Override
     public List<String> getAllRahmenTypen() {
-        List<String> AllRahmenTypen = new ArrayList<String>();
+        List<String> AllRahmenTypen = new ArrayList<>();
         rahmenList = db.getAllRahmenTypen();
         
         for(Rahmen r : rahmenList) {
@@ -55,7 +55,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     
     @Override
     public List<String> getAllRahmenfarben(){
-        List<String> AllRahmenfarben = new ArrayList<String>();
+        List<String> AllRahmenfarben = new ArrayList<>();
         rahmenfarbenList = db.getAllRahmenfarben();
         
         for(Rahmenfarbe r : rahmenfarbenList) {
@@ -66,7 +66,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     }
     @Override
     public List<String> getAllReifen(){
-        List<String> AllReifen = new ArrayList<String>();
+        List<String> AllReifen = new ArrayList<>();
         reifenList = db.getAllReifen();
         
         for(Reifen r: reifenList) {
@@ -77,7 +77,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     }
     @Override
     public List<String> getAllAntriebe(){
-        List<String> AllAntriebe = new ArrayList<String>();
+        List<String> AllAntriebe = new ArrayList<>();
         antriebeList = db.getAllAntriebe();
         
         for (Antrieb a: antriebeList) {
@@ -97,25 +97,25 @@ public class BusinessLogicImpl implements BusinessLogic {
         this.koerpergroesse = -1; 
         
         for (Rahmen r : rahmenList) {
-            if (r.toString() == rahmen) {
+            if (r.toString().equals(rahmen)) {
                 this.rahmen = r;
             }
         }
         
         for (Rahmenfarbe r : rahmenfarbenList) {
-            if (r.toString() == rahmenfarbe) {
+            if (r.toString().equals(rahmenfarbe)) {
                 this.rahmenfarbe = r;
             }
         }
         
         for (Reifen r : reifenList) {
-            if (r.toString() == reifen) {
+            if (r.toString().equals(reifen)) {
                 this.reifen = r;
             }
         }       
         
         for (Antrieb a : antriebeList) {
-            if (a.toString() == antrieb) {
+            if (a.toString().equals(antrieb)) {
                 this.antrieb = a;
             }
         }

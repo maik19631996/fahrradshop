@@ -1,0 +1,4 @@
+--patch-module
+de.ostfalia.businesslogic=_
+--add-reads
+de.ostfalia.businesslogic=ALL-UNNAMED

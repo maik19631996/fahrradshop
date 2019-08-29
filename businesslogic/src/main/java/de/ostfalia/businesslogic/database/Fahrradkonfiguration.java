@@ -12,6 +12,7 @@ package de.ostfalia.businesslogic.database;
 public interface Fahrradkonfiguration {
     public Antrieb getAntrieb();
     public Rahmen getRahmen();
+    public Rahmenfarbe getRahmenfarbe();
     public Reifen getReifen();
     public int getSchrittlaengel();
     public int getKoerpergroesse();
