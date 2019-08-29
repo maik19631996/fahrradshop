@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -21,6 +22,7 @@ public class PrimaryController {
     @FXML   private ChoiceBox choiceBoxAntriebe;
     @FXML   private TextField textFieldSchritt;
     @FXML   private TextField textFieldGroesse;
+    @FXML   private Label preis;
     
     @FXML
     public void initialize() {        
@@ -56,7 +58,7 @@ public class PrimaryController {
         } catch (InvalidConfigException er) {
             System.out.println(er);
         }
-        
+        //preis.setText(sum);
        //App.m.get("rahmen");
        //App.m.get("reifen");
        //App.m.get("antrieb");
