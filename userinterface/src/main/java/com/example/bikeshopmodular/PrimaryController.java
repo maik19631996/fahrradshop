@@ -58,7 +58,7 @@ public class PrimaryController {
         } catch (InvalidConfigException er) {
             System.out.println(er);
         }
-        //preis.setText(sum);
+       preis.setText(App.m.get("sum").toString());
        //App.m.get("rahmen");
        //App.m.get("reifen");
        //App.m.get("antrieb");

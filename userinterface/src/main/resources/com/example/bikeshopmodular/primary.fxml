@@ -24,50 +24,56 @@
     </AnchorPane>
     <AnchorPane prefHeight="324.0" prefWidth="560.0">
       <children>
-        <Label prefHeight="25.0" prefWidth="90.0" text="Rahmentyp" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="283.95" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="14.05" />
-        <ChoiceBox id="Rahmen" fx:id="choiceBoxRahmen" prefHeight="25.0" prefWidth="75.0" value="Item 1" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="14.0">
+        <Label prefHeight="22.0" prefWidth="142.0" text="Rahmentyp" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="282.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="20.0">
+          <font>
+            <Font size="14.0" fx:id="x2" />
+          </font>
+        </Label>
+        <ChoiceBox id="Rahmen" fx:id="choiceBoxRahmen" prefHeight="24.0" prefWidth="202.0" value="Item 1" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="18.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
-              <String fx:value="Item 1" />
+<!--              <String fx:value="Item 1" />
               <String fx:value="Item 2" />
-              <String fx:value="Item 3" />
+              <String fx:value="Item 3" />-->
             </FXCollections>
           </items>
         </ChoiceBox>
-        <Label prefHeight="25.0" prefWidth="90.0" text="Rahmenfarbe" textAlignment="LEFT" wrapText="false" AnchorPane.rightAnchor="470.0" AnchorPane.topAnchor="60.0" />
-        <ChoiceBox id="choiceBoxRahmen" fx:id="choiceBoxRahmenFarbe" prefHeight="25.0" prefWidth="75.0" AnchorPane.bottomAnchor="237.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="62.0">
+        <Label font="$x2" prefHeight="25.0" prefWidth="142.0" text="Rahmenfarbe" textAlignment="LEFT" wrapText="false" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="60.0" />
+        <ChoiceBox id="choiceBoxRahmen" fx:id="choiceBoxRahmenFarbe" prefHeight="23.0" prefWidth="202.0" AnchorPane.bottomAnchor="238.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="61.0">
           <items>
             <FXCollections fx:factory="observableArrayList" />
           </items>
         </ChoiceBox>
-        <Label prefHeight="25.0" prefWidth="101.0" text="Reifen" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="459.0" AnchorPane.topAnchor="95.0" />
-        <ChoiceBox id="getReifen" fx:id="choiceBoxReifen" prefHeight="21.0" prefWidth="75.0" AnchorPane.bottomAnchor="204.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="95.0">
+        <Label font="$x2" prefHeight="25.0" prefWidth="142.0" text="Reifen" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="100.0" />
+        <ChoiceBox id="getReifen" fx:id="choiceBoxReifen" prefHeight="23.0" prefWidth="202.0" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="100.0">
           <items>
             <FXCollections fx:factory="observableArrayList" />
           </items>
         </ChoiceBox>
-        <Label prefHeight="25.0" prefWidth="101.0" text="Antrieb" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="459.0" AnchorPane.topAnchor="135.0" />
-        <ChoiceBox id="getAntriebe" fx:id="choiceBoxAntriebe" maxHeight="-1.0" minWidth="-1.0" prefHeight="21.0" prefWidth="75.0" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="135.0">
+        <Label font="$x2" prefHeight="25.0" prefWidth="142.0" text="Antrieb" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="140.0" />
+        <ChoiceBox id="getAntriebe" fx:id="choiceBoxAntriebe" maxHeight="-1.0" minWidth="-1.0" prefHeight="23.0" prefWidth="202.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="138.0">
           <items>
             <FXCollections fx:factory="observableArrayList" />
           </items>
         </ChoiceBox>
-        <Label prefHeight="25.0" prefWidth="101.0" text="Deine Schrittlänge" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="123.05" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="459.0" AnchorPane.topAnchor="171.95" />
-        <TextField fx:id="textFieldSchritt" maxWidth="459.0" prefHeight="25.000008392333996" prefWidth="75.0" AnchorPane.bottomAnchor="123.05" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="171.95" />
-        <Label prefHeight="25.0" prefWidth="101.0" text="Deine Körpergröße" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="459.0" AnchorPane.topAnchor="216.0" />
-        <TextField id="getGroesse" fx:id="textFieldGroesse" maxWidth="560.0" minWidth="-1.0" prefHeight="25.0" prefWidth="75.0" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="216.0" />
+        <Label font="$x2" prefHeight="25.000000000000014" prefWidth="142.0" text="Deine Schrittlänge" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="123.05" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="180.0" />
+        <TextField fx:id="textFieldSchritt" maxWidth="459.0" prefHeight="25.000008392333996" prefWidth="75.0" AnchorPane.bottomAnchor="119.03" AnchorPane.leftAnchor="205.5" AnchorPane.rightAnchor="279.5" AnchorPane.topAnchor="175.97" />
+        <Label id="preis" alignment="CENTER_LEFT" font="$x2" prefHeight="25.000000000000014" prefWidth="75.0" text="in cm" textAlignment="LEFT" AnchorPane.bottomAnchor="123.05" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="171.95" />
+        <Label font="$x2" prefHeight="25.0" prefWidth="142.0" text="Deine Körpergröße" textAlignment="LEFT" wrapText="false" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="220.0" />
+        <TextField id="getGroesse" fx:id="textFieldGroesse" maxWidth="560.0" minWidth="-1.0" prefHeight="25.0" prefWidth="75.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="205.5" AnchorPane.rightAnchor="279.5" AnchorPane.topAnchor="218.0" />
+        <Label id="preis" alignment="CENTER_LEFT" font="$x2" prefHeight="25.000000000000014" prefWidth="75.0" text="in cm" textAlignment="LEFT" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="216.0" />
       </children>
     </AnchorPane>
     <AnchorPane minHeight="32.0" prefHeight="73.0" prefWidth="560.0">
       <children>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
           <children>
-            <Label fx:id="preis" alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="91.0" text="Preis" textAlignment="LEFT" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="470.0" AnchorPane.topAnchor="0.5">
+            <Label fx:id="preis" alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="91.0" text="Preis" textAlignment="LEFT" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="133.5" AnchorPane.rightAnchor="335.5" AnchorPane.topAnchor="0.5">
               <font>
                 <Font size="18.0" fx:id="x1" />
               </font>
             </Label>
-            <Label id="preis" alignment="CENTER_LEFT" font="$x1" prefHeight="55.0" prefWidth="91.0" text="€" textAlignment="LEFT" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="369.0" AnchorPane.topAnchor="0.5" />
+            <Label id="preis" alignment="CENTER_LEFT" font="$x1" prefHeight="55.0" prefWidth="91.0" text="€" textAlignment="LEFT" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="234.5" AnchorPane.rightAnchor="234.5" AnchorPane.topAnchor="0.5" />
           </children>
         </AnchorPane>
         <Button id="primaryButton" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" prefHeight="55.0" prefWidth="142.0" text="Berechnen" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="418.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.5" />
