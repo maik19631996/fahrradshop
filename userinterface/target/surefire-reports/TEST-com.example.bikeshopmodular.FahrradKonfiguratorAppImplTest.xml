@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="0" failures="0" name="de.ostfalia.businesslogic.businesslogic.TestFahrradKonfigurationImpl" time="0" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.2\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\m\Desktop\fahrradshop\businesslogic"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\m\Desktop\fahrradshop\userinterface"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="DE"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\m\Desktop\fahrradshop\businesslogic"/>
+    <property name="user.dir" value="C:\Users\m\Desktop\fahrradshop\userinterface"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="12.0.2+10"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -37,13 +37,13 @@
     <property name="os.version" value="10.0"/>
     <property name="user.home" value="C:\Users\m"/>
     <property name="user.timezone" value="Europe/Berlin"/>
-    <property name="file.encoding" value="Cp1252"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="12"/>
     <property name="user.name" value="m"/>
     <property name="java.class.path" value="C:\Program Files\NetBeans-11.1\netbeans\java\maven\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="12"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-11.1\netbeans\java\maven-nblib\netbeans-eventspy.jar install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-11.1\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-12.0.2"/>
     <property name="user.language" value="de"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,4 +60,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetReifen" time="0.002"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testGetAntriebe" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetRahmentyp" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetAntrieb" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetRahmenfarbe" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testGetRahmentypen" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testGetAllReifen" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testGetRahmenfarben" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetSchrittlaenge" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testGetSumPriceAsString" time="0"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetFahrradKonfiguration" time="0.001"/>
+  <testcase classname="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest" name="com.example.bikeshopmodular.FahrradKonfiguratorAppImplTest.testSetKoerpergroesse" time="0"/>
 </testsuite>

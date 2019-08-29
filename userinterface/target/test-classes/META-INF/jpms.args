@@ -1,0 +1,4 @@
+--patch-module
+com.example.bikeshopmodular=_
+--add-reads
+com.example.bikeshopmodular=ALL-UNNAMED

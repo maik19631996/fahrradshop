@@ -1,5 +1,9 @@
 package com.example.bikeshopmodular;
 
+import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
+import de.ostfalia.businesslogic.businesslogic.BusinessLogicImpl;
+import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
+import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,49 +11,32 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
-//import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
-//import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
-import java.util.List;
-import java.util.Map;
-
 /**
  * JavaFX App
  */
 public class App extends Application {
 
     private static Scene scene;
-    protected static String rahmentyp;
-    protected static String rahmenfarbe;
-    protected static String reifen;
-    protected static String antrieb;
-    protected static int schrittlaenge;
-    protected static int koerpergroesse;
+    private static BusinessLogic b;
+    private static FahrradKonfiguratorApp fkApp; 
     
-    protected static BusinessLogic businesslogic;
-    protected static List<String> antriebe;
-    protected static List<String> rahmentypen;
-    protected static List<String> rahmenfarben;
-    protected static List<String> allReifen;
+    public static FahrradKonfiguratorApp getFkApp() {
+        return fkApp;
+    }
     
-    protected static Map m;
-    
-    //protected static gesamtPreis
- 
     @Override
-    public void start(Stage stage) throws IOException {
-        //FacBusinessLogic facBusinessLogic = new FacBusinessLogicImpl();
-        //businesslogic = facBusinessLogic.create(maikstuff);
+    public void start(Stage stage) throws IOException {        
+        FacFahrradKonfiguratorApp fkFac = new FacFahrradKonfiguratorAppImpl();
+        FacBusinessLogic facB = new FacBusinessLogicImpl();
         
-        antriebe = businesslogic.getAllAntriebe();
-        rahmentypen = businesslogic.getAllRahmenTypen();
-        rahmenfarben = businesslogic.getAllRahmenfarben();
-        allReifen = businesslogic.getAllReifen();        
+        fkApp = fkFac.create(facB.create(new DbTestImpl()));
+        
+        fkApp = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
         
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
         stage.show();
-    }
+    }    
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));

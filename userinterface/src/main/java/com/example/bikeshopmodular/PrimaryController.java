@@ -1,6 +1,5 @@
 package com.example.bikeshopmodular;
 
-import de.ostfalia.businesslogic.businesslogic.InvalidConfigException;
 import java.io.IOException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,8 +8,12 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import com.example.bikeshopmodular.App;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class PrimaryController {
+    FahrradKonfiguratorApp fkApp;
     ObservableList<String> OLRahmentypen;
     ObservableList<String> OLRahmenfarben;
     ObservableList<String> OLAllReifen;
@@ -25,43 +28,47 @@ public class PrimaryController {
     @FXML   private Label preis;
     
     @FXML
-    public void initialize() {        
-        OLRahmentypen = FXCollections.observableArrayList(App.rahmentypen);
-        OLRahmenfarben = FXCollections.observableArrayList(App.rahmenfarben);
-        OLAllReifen = FXCollections.observableArrayList(App.allReifen);
-        OLAntriebe = FXCollections.observableArrayList(App.antriebe);
+    public void initialize() {       
+        fkApp = App.getFkApp();
+        OLRahmentypen = FXCollections.observableArrayList(fkApp.getRahmentypen());
+        OLRahmenfarben = FXCollections.observableArrayList(fkApp.getRahmenfarben());
+        OLAllReifen = FXCollections.observableArrayList(fkApp.getAllReifen());
+        OLAntriebe = FXCollections.observableArrayList(fkApp.getAntriebe());
         
         choiceBoxRahmen.setItems(OLRahmentypen);
         choiceBoxRahmenfarbe.setItems(OLRahmenfarben);
         choiceBoxReifen.setItems(OLAllReifen);
         choiceBoxAntriebe.setItems(OLAntriebe);
+        
+        choiceBoxRahmen.setValue(fkApp.getRahmentypen().get(0));
+        choiceBoxRahmenfarbe.setValue(fkApp.getRahmenfarben().get(0));
+        choiceBoxReifen.setValue(fkApp.getAllReifen().get(0));
+        choiceBoxAntriebe.setValue(fkApp.getAntriebe().get(0));
     }
     
     @FXML
     private void switchToSecondary() throws IOException {
-        App.rahmentyp = choiceBoxRahmen.getValue().toString();
-        App.rahmenfarbe = choiceBoxRahmenfarbe.getValue().toString();
-        App.reifen = choiceBoxReifen.getValue().toString();
-        App.antrieb = choiceBoxAntriebe.getValue().toString();
-
-        String _laenge = textFieldSchritt.getText();
-        int laenge = Integer.parseInt(_laenge);
-        App.schrittlaenge = laenge;
-        
-        String _groesse = textFieldGroesse.getText();
-        int groesse = Integer.parseInt(_groesse);
-        App.koerpergroesse = groesse;
+        fkApp.setRahmentyp(choiceBoxRahmen.getValue().toString());
+        fkApp.setRahmenfarbe(choiceBoxRahmenfarbe.getValue().toString()); 
+        fkApp.setReifen(choiceBoxReifen.getValue().toString());
+        fkApp.setAntrieb(choiceBoxAntriebe.getValue().toString());
         
         try {
-            App.businesslogic.setFahrradKonfiguration(App.rahmentyp, App.rahmenfarbe, App.reifen, App.antrieb, App.schrittlaenge, App.koerpergroesse);
-            App.m = App.businesslogic.getPrices();
-        } catch (InvalidConfigException er) {
-            System.out.println(er);
-        }
-       preis.setText(App.m.get("sum").toString());
-       //App.m.get("rahmen");
-       //App.m.get("reifen");
-       //App.m.get("antrieb");
-       //App.m.get("sum");
+            String _laenge = textFieldSchritt.getText();
+            int laenge = Integer.parseInt(_laenge);
+            fkApp.setSchrittlaenge(laenge);
+
+            String _groesse = textFieldGroesse.getText();
+            int groesse = Integer.parseInt(_groesse);
+            fkApp.setKoerpergroesse(groesse);
+            
+            preis.setText(fkApp.getSumPriceAsString());
+        } catch (NumberFormatException er) {
+            Alert alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("Das waren keine Zentimeterangaben");
+            alert.setContentText("Bitte nur ganze Zahlen.");
+            alert.showAndWait();
+        }       
     }
 }
