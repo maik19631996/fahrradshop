@@ -29,7 +29,7 @@ public class FahrradKonfiguratorAppImpl implements FahrradKonfiguratorApp {
 
     private Map m;
 
-    public FahrradKonfiguratorAppImpl(BusinessLogic businesslogic) {
+    FahrradKonfiguratorAppImpl(BusinessLogic businesslogic) {
         this.businesslogic = businesslogic;
         antriebe = this.businesslogic.getAllAntriebe();
         rahmentypen = this.businesslogic.getAllRahmenTypen();
