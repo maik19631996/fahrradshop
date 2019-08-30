@@ -33,7 +33,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     private List<Reifen> reifenList = null;
     private List<Antrieb> antriebeList = null; 
     
-    public BusinessLogicImpl(Database db) {
+    BusinessLogicImpl(Database db) {
         this.db = db;
         rahmenList = db.getAllRahmenTypen();
         rahmenfarbenList = db.getAllRahmenfarben();

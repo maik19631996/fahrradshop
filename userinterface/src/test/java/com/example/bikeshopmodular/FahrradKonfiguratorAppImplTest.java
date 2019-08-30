@@ -6,6 +6,8 @@
 package com.example.bikeshopmodular;
 
 import de.ostfalia.businesslogic.businesslogic.BusinessLogicImpl;
+import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
+import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
 import de.ostfalia.businesslogic.businesslogic.InvalidConfigException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,26 +23,13 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author m
  */
 public class FahrradKonfiguratorAppImplTest {
-    private FahrradKonfiguratorAppImpl instance;
+    private FahrradKonfiguratorApp instance;
     
     public FahrradKonfiguratorAppImplTest() {
-        instance = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
+        FacFahrradKonfiguratorApp fkFac = new FacFahrradKonfiguratorAppImpl();
+        FacBusinessLogic facB = new FacBusinessLogicImpl();        
+        instance = fkFac.create(facB.create(new DbTestImpl()));
+        //instance = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
     }
 
     /**

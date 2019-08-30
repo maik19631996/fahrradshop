@@ -31,7 +31,7 @@ public class App extends Application {
         
         fkApp = fkFac.create(facB.create(new DbTestImpl()));
         
-        fkApp = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
+        //fkApp = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
         
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
