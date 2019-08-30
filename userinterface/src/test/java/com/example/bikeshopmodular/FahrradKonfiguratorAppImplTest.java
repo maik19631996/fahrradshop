@@ -25,11 +25,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FahrradKonfiguratorAppImplTest {
     private FahrradKonfiguratorApp instance;
     
-    public FahrradKonfiguratorAppImplTest() {
+    FahrradKonfiguratorAppImplTest() {
         FacFahrradKonfiguratorApp fkFac = new FacFahrradKonfiguratorAppImpl();
         FacBusinessLogic facB = new FacBusinessLogicImpl();        
         instance = fkFac.create(facB.create(new DbTestImpl()));
-        //instance = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
     }
 
     /**
