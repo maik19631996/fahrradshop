@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BusinessLogicImplTest {
     private static BusinessLogic instance;    
     
-    BusinessLogicImplTest() {
+    public BusinessLogicImplTest() {
         instance = new BusinessLogicImpl(new DbTestImpl());
     }
 
