@@ -141,7 +141,7 @@ public class BusinessLogicImpl implements BusinessLogic {
             else if (schrittlaenge == -1)
                 m = "Schrittlaenge muss groesser als 0 sein!";
             else if (koerpergroesse == -1)
-                 m = "K�rpergr��e muss gr��er als 0 sein!";        
+                 m = "Koerpergroesse muss groesser als 0 sein!";        
             
             this.rahmen = null;
             this.rahmenfarbe = null;
