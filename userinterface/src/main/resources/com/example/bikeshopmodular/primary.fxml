@@ -77,7 +77,7 @@
             <Label id="preis" alignment="CENTER_LEFT" font="$x1" prefHeight="68.0" prefWidth="119.5" text="Gesamtpreis:" textAlignment="LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="426.5" AnchorPane.topAnchor="0.0" />
           </children>
         </AnchorPane>
-        <Button id="primaryButton" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#switchToSecondary" prefHeight="55.0" prefWidth="142.0" text="Berechnen" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="418.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.5" />
+        <Button id="primaryButton" alignment="CENTER" defaultButton="true" minHeight="-1.0" minWidth="-1.0" onAction="#clickBerechnen" prefHeight="55.0" prefWidth="142.0" text="Berechnen" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="418.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.5" />
       </children>
     </AnchorPane>
   </children>

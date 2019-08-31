@@ -11,5 +11,5 @@ import de.ostfalia.businesslogic.database.Database;
  * @author z
  */
 public interface FacBusinessLogic {
-    BusinessLogic create(Database db);
+    public BusinessLogic create(Database db);
 }

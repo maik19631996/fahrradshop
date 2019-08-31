@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package de.ostfalia.businesslogic.businesslogic;
-import de.ostfalia.businesslogic.database.Database;
 import java.util.List;
 import java.util.Map;
 

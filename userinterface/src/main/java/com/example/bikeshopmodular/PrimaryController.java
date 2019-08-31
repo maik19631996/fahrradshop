@@ -7,17 +7,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import com.example.bikeshopmodular.App;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 public class PrimaryController {
-    FahrradKonfiguratorApp fkApp;
-    ObservableList<String> OLRahmentypen;
-    ObservableList<String> OLRahmenfarben;
-    ObservableList<String> OLAllReifen;
-    ObservableList<String> OLAntriebe;
+    private FahrradKonfiguratorApp fkApp;
+    private ObservableList<String> OLRahmentypen;
+    private ObservableList<String> OLRahmenfarben;
+    private ObservableList<String> OLAllReifen;
+    private ObservableList<String> OLAntriebe;
     
     @FXML   private ChoiceBox choiceBoxRahmen;
     @FXML   private ChoiceBox choiceBoxRahmenfarbe;
@@ -28,7 +26,7 @@ public class PrimaryController {
     @FXML   private Label preis;
     
     @FXML
-    public void initialize() {       
+    private void initialize() {       
         fkApp = App.getFkApp();
         OLRahmentypen = FXCollections.observableArrayList(fkApp.getRahmentypen());
         OLRahmenfarben = FXCollections.observableArrayList(fkApp.getRahmenfarben());
@@ -47,7 +45,7 @@ public class PrimaryController {
     }
     
     @FXML
-    private void switchToSecondary() throws IOException {
+    private void clickBerechnen() throws IOException {
         fkApp.setRahmentyp(choiceBoxRahmen.getValue().toString());
         fkApp.setRahmenfarbe(choiceBoxRahmenfarbe.getValue().toString()); 
         fkApp.setReifen(choiceBoxReifen.getValue().toString());
