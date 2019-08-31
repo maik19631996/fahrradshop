@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="12.0.1+12"/>
@@ -61,10 +61,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetAllReifen" time="0.002"/>
-  <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetAllAntriebe" time="0"/>
+  <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetAllAntriebe" time="0.001"/>
+  <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetAllReifen" time="0"/>
   <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetPrices" time="0"/>
+  <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testSetFahrradKonfiguration" time="0"/>
   <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetAllRahmenfarben" time="0"/>
   <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testGetAllRahmenTypen" time="0"/>
-  <testcase classname="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest" name="de.ostfalia.businesslogic.businesslogic.BusinessLogicImplTest.testSetFahrradKonfiguration" time="0"/>
 </testsuite>

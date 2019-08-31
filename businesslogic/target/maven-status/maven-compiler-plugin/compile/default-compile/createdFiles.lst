@@ -1,12 +1,1 @@
-de\ostfalia\businesslogic\database\Rahmenfarbe.class
-de\ostfalia\businesslogic\database\Antrieb.class
-de\ostfalia\businesslogic\businesslogic\FacBusinessLogic.class
-de\ostfalia\businesslogic\database\Reifen.class
-de\ostfalia\businesslogic\businesslogic\BusinessLogicImpl.class
-de\ostfalia\businesslogic\businesslogic\BusinessLogic.class
-de\ostfalia\businesslogic\businesslogic\InvalidConfigException.class
 module-info.class
-de\ostfalia\businesslogic\businesslogic\FacBusinessLogicImpl.class
-de\ostfalia\businesslogic\database\Database.class
-de\ostfalia\businesslogic\database\Fahrradkonfiguration.class
-de\ostfalia\businesslogic\database\Rahmen.class

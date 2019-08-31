@@ -7,7 +7,7 @@
 module DeOstfaliaDatabaseTest {
     requires java.sql;
     
-    exports datamodell;
-    exports injector;
+    requires de.ostfalia.businesslogic;
+    exports de.ostfalia.database.shopFactory;
     
 }

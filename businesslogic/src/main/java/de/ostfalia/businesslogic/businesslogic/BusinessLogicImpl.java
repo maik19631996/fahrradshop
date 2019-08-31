@@ -33,7 +33,7 @@ public class BusinessLogicImpl implements BusinessLogic {
     private List<Reifen> reifenList = null;
     private List<Antrieb> antriebeList = null; 
     
-    public BusinessLogicImpl(Database db) {
+    BusinessLogicImpl(Database db) {
         this.db = db;
         rahmenList = db.getAllRahmenTypen();
         rahmenfarbenList = db.getAllRahmenfarben();
@@ -139,9 +139,9 @@ public class BusinessLogicImpl implements BusinessLogic {
             else if (this.antrieb == null)
                 m = "Antrieb nicht in Antriebsliste gefunden";
             else if (schrittlaenge == -1)
-                m = "Schrittlänge muss größer als 0 sein!";
+                m = "Schrittlaenge muss groesser als 0 sein!";
             else if (koerpergroesse == -1)
-                 m = "Körpergröße muss größer als 0 sein!";        
+                 m = "Kï¿½rpergrï¿½ï¿½e muss grï¿½ï¿½er als 0 sein!";        
             
             this.rahmen = null;
             this.rahmenfarbe = null;

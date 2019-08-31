@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  */
 public class H2DBinit {
 
-    static boolean getOrCreateDB() {
+    public static boolean getOrCreateDB() {
 
         try {
             Class.forName("org.h2.Driver");
@@ -90,8 +90,8 @@ public class H2DBinit {
 
         return false;
     }
-
+/* for testing puposes
     public static void main(String[] args) {
         getOrCreateDB();
-    }
+    }*/
 }
