@@ -7,7 +7,7 @@ package de.ostfalia.businesslogic.database;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public interface Fahrradkonfiguration {
     public Antrieb getAntrieb();

@@ -13,7 +13,7 @@ import de.ostfalia.businesslogic.database.Reifen;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class TestFahrradKonfigurationImpl implements Fahrradkonfiguration {
     

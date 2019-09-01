@@ -17,7 +17,7 @@ import java.util.Map;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class BusinessLogicImpl implements BusinessLogic {
 

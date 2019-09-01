@@ -5,7 +5,6 @@
  */
 package com.example.bikeshopmodular;
 
-import com.example.bikeshopmodular.*;
 import de.ostfalia.businesslogic.database.Antrieb;
 import de.ostfalia.businesslogic.database.Database;
 import de.ostfalia.businesslogic.database.Rahmen;
@@ -16,7 +15,7 @@ import java.util.List;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class DbTestImpl implements Database {
     private List<Rahmen> rahmen;

@@ -5,7 +5,6 @@
  */
 package com.example.bikeshopmodular;
 
-import com.example.bikeshopmodular.*;
 import de.ostfalia.businesslogic.database.Antrieb;
 import de.ostfalia.businesslogic.database.Rahmen;
 import de.ostfalia.businesslogic.database.Rahmenfarbe;
@@ -13,7 +12,7 @@ import de.ostfalia.businesslogic.database.Reifen;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class TestConfigItemImpl implements Antrieb, Rahmen, Rahmenfarbe, Reifen {
     private String type;

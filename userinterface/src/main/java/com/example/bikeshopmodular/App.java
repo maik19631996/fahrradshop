@@ -1,7 +1,6 @@
 package com.example.bikeshopmodular;
 
 import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
-import de.ostfalia.businesslogic.businesslogic.BusinessLogicImpl;
 import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
 import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
 import de.ostfalia.database.shopFactory.DatabaseImpl;
@@ -33,6 +32,7 @@ public class App extends Application {
         fkApp = fkFac.create(facB.create(new DatabaseImpl()));
         
         //fkApp = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
+        stage.setResizable(false);
         
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);

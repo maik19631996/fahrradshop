@@ -7,7 +7,7 @@ package de.ostfalia.businesslogic.businesslogic;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class InvalidConfigException extends RuntimeException {
     public InvalidConfigException(String message) {

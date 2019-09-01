@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  *
- * @author m
+ * @author Rene Hellmuth
  */
 public class FahrradKonfiguratorAppImpl implements FahrradKonfiguratorApp {
     private String rahmentyp;

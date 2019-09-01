@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class DbTestImpl implements Database {
     private List<Rahmen> rahmen;

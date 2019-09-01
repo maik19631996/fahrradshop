@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public interface Database {
     public List<Rahmen> getAllRahmenTypen();

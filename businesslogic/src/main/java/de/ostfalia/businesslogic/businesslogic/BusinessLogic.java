@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public interface BusinessLogic {    
     public List<String> getAllRahmenTypen();

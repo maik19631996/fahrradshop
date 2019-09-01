@@ -12,7 +12,7 @@ import de.ostfalia.businesslogic.database.Reifen;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class TestConfigItemImpl implements Antrieb, Rahmen, Rahmenfarbe, Reifen {
     private String type;

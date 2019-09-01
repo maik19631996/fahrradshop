@@ -5,22 +5,17 @@
  */
 package com.example.bikeshopmodular;
 
-import de.ostfalia.businesslogic.businesslogic.BusinessLogicImpl;
 import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
 import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
 import de.ostfalia.businesslogic.businesslogic.InvalidConfigException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author m
+ * @author Rene Hellmuth
  */
 public class FahrradKonfiguratorAppImplTest {
     private FahrradKonfiguratorApp instance;

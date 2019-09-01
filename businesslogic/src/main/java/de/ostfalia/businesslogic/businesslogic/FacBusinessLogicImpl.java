@@ -8,7 +8,7 @@ import de.ostfalia.businesslogic.database.Database;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public class FacBusinessLogicImpl implements FacBusinessLogic {
     @Override

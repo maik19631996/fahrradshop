@@ -8,7 +8,7 @@ import de.ostfalia.businesslogic.database.Database;
 
 /**
  *
- * @author z
+ * @author Rubyn Angelo Stark
  */
 public interface FacBusinessLogic {
     public BusinessLogic create(Database db);

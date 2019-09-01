@@ -8,7 +8,7 @@ import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
 
 /**
  *
- * @author m
+ * @author Rene Hellmuth
  */
 public class FacFahrradKonfiguratorAppImpl implements FacFahrradKonfiguratorApp {
     public FahrradKonfiguratorApp create(BusinessLogic businesslogic) {

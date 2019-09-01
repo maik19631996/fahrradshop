@@ -9,7 +9,7 @@ import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
 
 /**
  *
- * @author m
+ * @author Rene Hellmuth
  */
 public interface FacFahrradKonfiguratorApp {
     public FahrradKonfiguratorApp create(BusinessLogic businesslogic);

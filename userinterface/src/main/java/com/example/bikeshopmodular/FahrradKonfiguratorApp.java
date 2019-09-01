@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 package com.example.bikeshopmodular;
-import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
 import java.util.List;
 /**
  *
- * @author m
+ * @author Rene Hellmuth
  */
 public interface FahrradKonfiguratorApp {
     public List<String> getRahmentypen();
