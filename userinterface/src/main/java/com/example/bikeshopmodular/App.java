@@ -4,6 +4,7 @@ import de.ostfalia.businesslogic.businesslogic.BusinessLogic;
 import de.ostfalia.businesslogic.businesslogic.BusinessLogicImpl;
 import de.ostfalia.businesslogic.businesslogic.FacBusinessLogic;
 import de.ostfalia.businesslogic.businesslogic.FacBusinessLogicImpl;
+import de.ostfalia.database.shopFactory.DatabaseImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,7 +30,7 @@ public class App extends Application {
         FacFahrradKonfiguratorApp fkFac = new FacFahrradKonfiguratorAppImpl();
         FacBusinessLogic facB = new FacBusinessLogicImpl();
         
-        fkApp = fkFac.create(facB.create(new DbTestImpl()));
+        fkApp = fkFac.create(facB.create(new DatabaseImpl()));
         
         //fkApp = new FahrradKonfiguratorAppImpl(new BusinessLogicImpl(new DbTestImpl()));
         

@@ -4,7 +4,7 @@
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+3"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/zulu-12-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/maik/NetBeansProjects/BikeShopModular/businesslogic"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/maik/NetBeansProjects/BikeShopModular"/>
     <property name="java.vm.vendor" value="Azul Systems, Inc."/>
     <property name="java.vendor.url" value="http://www.azulsystems.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -13,7 +13,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/maik/NetBeansProjects/BikeShopModular/businesslogic"/>
+    <property name="user.dir" value="/home/maik/NetBeansProjects/BikeShopModular"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="12.0.2+3"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
@@ -42,7 +42,7 @@
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="12"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/snap/netbeans/10/netbeans/java/maven-nblib/netbeans-eventspy.jar install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/snap/netbeans/10/netbeans/java/maven-nblib/netbeans-eventspy.jar clean install"/>
     <property name="java.home" value="/usr/lib/jvm/zulu-12-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>

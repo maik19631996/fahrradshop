@@ -15,7 +15,7 @@ import de.ostfalia.businesslogic.database.Reifen;
  *
  * @author maik
  */
-class FahrradkofigurationIImpl implements Fahrradkonfiguration{
+class FahrradkofigurationImpl implements Fahrradkonfiguration{
     
     
 
