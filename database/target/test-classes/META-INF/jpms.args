@@ -1,0 +1,4 @@
+--patch-module
+DeOstfaliaDatabaseTest=_
+--add-reads
+DeOstfaliaDatabaseTest=ALL-UNNAMED
